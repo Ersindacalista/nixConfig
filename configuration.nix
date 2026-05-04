@@ -109,12 +109,17 @@
      nwg-look
      clipman
      yazi
+     vesktop
   ];
   nix.settings.experimental-features =  [ "nix-command" "flakes"];
   
   system.stateVersion = "25.11"; # Did you read the comment?
   programs.steam = {
     enable = true;
-
   };
+  fonts.packages = with pkgs; [
+    nerd-fonts.hack
+  ];
+
+
 }
