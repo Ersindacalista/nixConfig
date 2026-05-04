@@ -1,15 +1,45 @@
 {
     "layer": "top",
-    "height" : 20,
+    "height" : 25,
     "reload_style_on_change": true,
-    "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["sway/window"],
-    "modules-right": ["clock"],
-    "sway/window": {
-        "max-length": 50
-    },
+    "modules-left": ["hyprland/workspaces" , "tray"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["clock","network","pavucontrol"],
     "clock": {
         "format-alt": "{:%a, %d. %b  %H:%M}"
+    },
+    "hyprland/workspaces": {
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1":"1",
+            "2":"2",
+            "3":"3",
+            "4":"4"
+        }
+    },
+    "hyprland/window":{
+        "format":"{title}",
+        "max-length": 50
+    },
+    "network":{
+        "format-ethernet": "󰈀 LAN",
+        "format-disconnected": " Offline",
+        "format-linked": "󱦂 No IP",
+        "tooltip-format": "{ifname}\nIP: {ipaddr}",
+        "interval": 3
+
+    },
+    "tray": {
+    "icon-size": 16,
+    "spacing": 8
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-muted": " muted",
+        "format-icons": {
+            "default": ["", ""]
+        },
+        "on-click": "pavucontrol"
     }
-    
 }
