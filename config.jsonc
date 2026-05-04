@@ -4,8 +4,9 @@
     "reload_style_on_change": true,
     "modules-left": ["hyprland/workspaces" , "tray"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["clock","network","pavucontrol"],
+    "modules-right": ["network","pulseaudio","clock"],
     "clock": {
+        "format": "{:%H:%M}",
         "format-alt": "{:%a, %d. %b  %H:%M}"
     },
     "hyprland/workspaces": {
@@ -23,6 +24,7 @@
         "max-length": 50
     },
     "network":{
+        "format-wifi": " {essid}",
         "format-ethernet": "󰈀 LAN",
         "format-disconnected": " Offline",
         "format-linked": "󱦂 No IP",
@@ -38,7 +40,7 @@
         "format": "{volume}% {icon}",
         "format-muted": " muted",
         "format-icons": {
-            "default": ["", ""]
+            "default": ["󰕿", "󰖀", "󰕾"]
         },
         "on-click": "pavucontrol"
     }
