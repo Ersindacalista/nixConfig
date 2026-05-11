@@ -1,0 +1,84 @@
+
+* {
+  font-family: "Hack Nerd Font";
+  font-size: 13px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: #11182f;
+  color: #a89984;
+  border-bottom: 1px solid #3c4a84;
+}
+
+#workspaces,
+#network,
+#pulseaudio,
+#clock,
+#tray,
+#window {
+  padding: 0 8px;
+}
+
+#workspaces button {
+  color: #bbadcd;
+  background: transparent;
+  border: 1px solid #bbadcd;
+  border-radius: 0;
+  padding: 0 6px;
+  margin: 3px 2px;
+  min-width: 18px;
+  box-shadow: none;
+  transition: color 0.1s, border-color 0.1s;
+}
+
+#workspaces button.active {
+  color: #e40d26;
+  border-color: #e40d26;
+  background: transparent;
+}
+
+#workspaces button:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+  background: transparent;
+  box-shadow: none;
+}
+
+#window {
+  color: #bbadcd;
+}
+
+#network {
+  color: #bbadcd;
+}
+
+#network.disconnected {
+  color: #fb4934;
+}
+
+#pulseaudio {
+  color: #bbadcd;
+}
+
+#pulseaudio.muted {
+  color: #fb4934;
+}
+
+#clock {
+  color: #bbadcd;
+}
+
+
+#tray {
+  padding-right: 8px;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  color: #fb4934;
+}
